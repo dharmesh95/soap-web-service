@@ -13,12 +13,14 @@ import javax.jws.WebParam;
 import javax.jws.WebService;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.xml.ws.soap.MTOM;
 
 /**
  *
  * @author Dharmesh
  */
 @WebService
+@MTOM(enabled = true, threshold = 3000)
 public class MoviesService {
 
     @WebMethod
